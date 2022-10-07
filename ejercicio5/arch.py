@@ -1,19 +1,29 @@
 from classes.classes import Vehiculo, Coche
 
-if __name__ == '__main__':
-    #creamos algunos vehiculos
-    coche = Vehiculo("rojo", 4)
-    rayoMcQueen = Coche("rojo", 4, 200, 3)
 
-    lista = []
-    lista.append(coche)
-    lista.append(rayoMcQueen)
+#creamos algunos vehiculos
+helicoptero = Vehiculo("rojo", 0)
+rayoMcQueen = Coche("rojo", 4, 200, 3)
 
-    def catalogar(l):
-        for i in range(len(l)):
-            print("{}".format(l[i]))
+lista = []
+lista.append(helicoptero)
+lista.append(rayoMcQueen)
 
-    catalogar(lista)
+#funcion catalogar inicial
+def catalogar(l, ruedas):
+    contador = 0
+    for i in range(len(l)):
+        if ruedas == l[i].ruedas:
+            contador = contador + 1
+            print("{}, {}".format(l[i].get_clase(),l[i]))
+    print("Se han encontrado {} vehiculos con {} ruedas".format(contador, ruedas))
 
-    print(coche.get_clase())
+
+
+catalogar(lista, 4)
+
+
+
+
+
 
