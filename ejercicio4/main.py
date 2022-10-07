@@ -6,7 +6,7 @@ if __name__ == '__main__':
         try:
             numero = 7/0
         except ZeroDivisionError:
-            print("ZeroDivisionError")
+            print("no se puede dividir entre 0")
 
     elif funcion == 2:
         try:
@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
             lista[10]
         except IndexError:
-            print
+            print("la lista no es tan larga")
 
     elif funcion == 3:
         try:
@@ -22,4 +22,15 @@ if __name__ == '__main__':
             paises = { "españa":"español", "eeuu":"inglés", "italia":"italiano" } 
 
             paises["alemania"]
+
+        except KeyError:
+            print("alemania no esta en el diccionario")
+
+    elif funcion == 4:
+        try:
+            resulltado = "2" + 10
+        except:
+            print("son valores de tipos distintos")
+            pass
+
         
